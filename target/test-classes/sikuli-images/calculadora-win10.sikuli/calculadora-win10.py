@@ -1,0 +1,7 @@
+"menu.png"
+"scientific.png"
+"sin-button.png"
+"sin-button-old.png"
+"cos-button-old.png"
+"cos-button.png"
+"number7.png"

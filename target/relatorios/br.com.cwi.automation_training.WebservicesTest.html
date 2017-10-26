@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/6d3843c29c354373fafad29c03a1a89b7e06c374/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Oct 24, 2017 10:37:22 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.6</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>14</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Cenario: POST - Realizar requisicao de exemplo</span>
+						<span class='test-time'>Oct 24, 2017 10:37:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 24, 2017 10:37:22 PM</span>
+	<span class='label end-time'>Oct 24, 2017 10:37:23 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+359ms</span>
+</div>
+	<div class='test-desc'>POST - Realizar requisicao de exemplo </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:37:23 PM</td>
+					<td class='step-details'><b>Resultado Apresentado corretamente: </b><br>$.headers.Estou-Aprendendo = Hello World!</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Request</div>						
+						<span class='node-time'>Oct 24, 2017 10:37:22 PM</span>
+						<span class='node-duration'>0h 0m 0s+12ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:22 PM</td>
+													<td class='step-details'><b>URL Requisicao:</b> https://httpbin.org/post</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:22 PM</td>
+													<td class='step-details'><b>Cabecalho Requisicao adicional:</b> Estou-Aprendendo : Hello World!</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:22 PM</td>
+													<td class='step-details'><b>Metodo Requisicao:</b> POST</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='9'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Response</div>						
+						<span class='node-time'>Oct 24, 2017 10:37:22 PM</span>
+						<span class='node-duration'>0h 0m 1s+348ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:23 PM</td>
+													<td class='step-details'><b>Codigo Resposta:</b> 200</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:23 PM</td>
+													<td class='step-details'><b>Tamanho Conteudo Resposta:</b> 400</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:23 PM</td>
+													<td class='step-details'><b>Corpo Resposta:</b> <pre>{
+    "args": {},
+    "headers": {
+        "Estou-Aprendendo": "Hello World!",
+        "Accept": "text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2",
+        "Connection": "close",
+        "User-Agent": "Java/1.8.0_144",
+        "Host": "httpbin.org",
+        "Content-Length": "0"
+    },
+    "data": "",
+    "form": {},
+    "origin": "189.27.202.58",
+    "files": {},
+    "json": null,
+    "url": "https://httpbin.org/post"
+}</pre></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>Cenario: GET - Consultar previsao do tempo para Porto Alegre RS</span>
+						<span class='test-time'>Oct 24, 2017 10:37:24 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 24, 2017 10:37:24 PM</span>
+	<span class='label end-time'>Oct 24, 2017 10:37:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+979ms</span>
+</div>
+	<div class='test-desc'>GET - Consultar previsao do tempo para Porto Alegre RS </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:37:25 PM</td>
+					<td class='step-details'><b>Response Code apresentado corretamente: </b>200</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:37:25 PM</td>
+					<td class='step-details'><b>Resultado Apresentado corretamente: </b><br>$.query.results.channel.location.city = Porto Alegre</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:37:25 PM</td>
+					<td class='step-details'><b>Resultado Apresentado corretamente: </b><br>$.query.results.channel.location.country = Brazil</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:37:25 PM</td>
+					<td class='step-details'><b>Resultado Apresentado corretamente: </b><br>$.query.results.channel.location.region =  RS</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='11'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Request</div>						
+						<span class='node-time'>Oct 24, 2017 10:37:24 PM</span>
+						<span class='node-duration'>0h 0m 0s+4ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:24 PM</td>
+													<td class='step-details'><b>URL Requisicao:</b> https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22porto%20alegre%2C%20br%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:24 PM</td>
+													<td class='step-details'><b>Cabecalho Requisicao adicional:</b> q : select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"Porto Alegre, br\")</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:24 PM</td>
+													<td class='step-details'><b>Cabecalho Requisicao adicional:</b> format : json</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:24 PM</td>
+													<td class='step-details'><b>Cabecalho Requisicao adicional:</b> env : store%3A%2F%2Fdatatables.org%2Falltableswithkeys</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:24 PM</td>
+													<td class='step-details'><b>Metodo Requisicao:</b> GET</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Response</div>						
+						<span class='node-time'>Oct 24, 2017 10:37:24 PM</span>
+						<span class='node-duration'>0h 0m 0s+978ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:25 PM</td>
+													<td class='step-details'><b>Codigo Resposta:</b> 200</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:25 PM</td>
+													<td class='step-details'><b>Tamanho Conteudo Resposta:</b> null</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>10:37:25 PM</td>
+													<td class='step-details'><b>Corpo Resposta:</b> <pre>{"query": {
+    "created": "2017-10-25T00:37:26Z",
+    "count": 1,
+    "lang": "en-US",
+    "results": {"channel": {
+        "atmosphere": {
+            "rising": "0",
+            "visibility": "16.1",
+            "humidity": "84",
+            "pressure": "1013.0"
+        },
+        "image": {
+            "width": "142",
+            "link": "http://weather.yahoo.com",
+            "title": "Yahoo! Weather",
+            "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif",
+            "height": "18"
+        },
+        "item": {
+            "condition": {
+                "date": "Tue, 24 Oct 2017 10:00 PM BRST",
+                "temp": "64",
+                "code": "31",
+                "text": "Clear"
+            },
+            "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-455823/",
+            "description": "<![CDATA[<img src=\"http://l.yimg.com/a/i/us/we/52/31.gif\"/>\n<BR />\n<b>Current Conditions:<\/b>\n<BR />Clear\n<BR />\n<BR />\n<b>Forecast:<\/b>\n<BR /> Tue - Mostly Sunny. High: 75Low: 56\n<BR /> Wed - Cloudy. High: 78Low: 62\n<BR /> Thu - Scattered Thunderstorms. High: 77Low: 64\n<BR /> Fri - Scattered Thunderstorms. High: 74Low: 67\n<BR /> Sat - Partly Cloudy. High: 72Low: 61\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-455823/\">Full Forecast at Yahoo! Weather<\/a>\n<BR />\n<BR />\n<BR />\n]]>",
+            "guid": {"isPermaLink": "false"},
+            "forecast": [
+                {
+                    "date": "24 Oct 2017",
+                    "high": "75",
+                    "code": "34",
+                    "low": "56",
+                    "text": "Mostly Sunny",
+                    "day": "Tue"
+                },
+                {
+                    "date": "25 Oct 2017",
+                    "high": "78",
+                    "code": "26",
+                    "low": "62",
+                    "text": "Cloudy",
+                    "day": "Wed"
+                },
+                {
+                    "date": "26 Oct 2017",
+                    "high": "77",
+                    "code": "47",
+                    "low": "64",
+                    "text": "Scattered Thunderstorms",
+                    "day": "Thu"
+                },
+                {
+                    "date": "27 Oct 2017",
+                    "high": "74",
+                    "code": "47",
+                    "low": "67",
+                    "text": "Scattered Thunderstorms",
+                    "day": "Fri"
+                },
+                {
+                    "date": "28 Oct 2017",
+                    "high": "72",
+                    "code": "30",
+                    "low": "61",
+                    "text": "Partly Cloudy",
+                    "day": "Sat"
+                },
+                {
+                    "date": "29 Oct 2017",
+                    "high": "76",
+                    "code": "28",
+                    "low": "61",
+                    "text": "Mostly Cloudy",
+                    "day": "Sun"
+                },
+                {
+                    "date": "30 Oct 2017",
+                    "high": "74",
+                    "code": "47",
+                    "low": "64",
+                    "text": "Scattered Thunderstorms",
+                    "day": "Mon"
+                },
+                {
+                    "date": "31 Oct 2017",
+                    "high": "70",
+                    "code": "28",
+                    "low": "63",
+                    "text": "Mostly Cloudy",
+                    "day": "Tue"
+                },
+                {
+                    "date": "01 Nov 2017",
+                    "high": "73",
+                    "code": "34",
+                    "low": "60",
+                    "text": "Mostly Sunny",
+                    "day": "Wed"
+                },
+                {
+                    "date": "02 Nov 2017",
+                    "high": "75",
+                    "code": "30",
+                    "low": "62",
+                    "text": "Partly Cloudy",
+                    "day": "Thu"
+                }
+            ],
+            "title": "Conditions for Porto Alegre, RS, BR at 10:00 PM BRST",
+            "pubDate": "Tue, 24 Oct 2017 10:00 PM BRST",
+            "lat": "-30.03425",
+            "long": "-51.22802"
+        },
+        "lastBuildDate": "Tue, 24 Oct 2017 10:37 PM BRST",
+        "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-455823/",
+        "description": "Yahoo! Weather for Porto Alegre, RS, BR",
+        "language": "en-us",
+        "units": {
+            "distance": "mi",
+            "temperature": "F",
+            "pressure": "in",
+            "speed": "mph"
+        },
+        "title": "Yahoo! Weather - Porto Alegre, RS, BR",
+        "astronomy": {
+            "sunrise": "6:38 am",
+            "sunset": "7:41 pm"
+        },
+        "ttl": "60",
+        "location": {
+            "country": "Brazil",
+            "city": "Porto Alegre",
+            "region": " RS"
+        },
+        "wind": {
+            "chill": "63",
+            "speed": "18",
+            "direction": "113"
+        }
+    }}
+}}</pre></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>4</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>14</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Oct 24, 2017 10:37:22 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Oct 24, 2017 10:37:25 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>3,176ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>test.base_url</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>test.application</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>os.name</td>
+								<td>Windows 10</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 4,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 14,
+				exceptionsChild: 0,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/5ed7b0c339b51aa347b44ccaa2e2ff29905b2f9f/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+	</body>
+	
+</html>

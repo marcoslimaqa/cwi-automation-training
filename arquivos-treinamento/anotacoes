@@ -1,0 +1,81 @@
+Utilizar Ecommerce demo (ter um site alternativo caso estes não funcione)
+Estimar tempos
+Links:
+https://targettrust.com.br/curso/automacao-de-testes-funcionais-com-selenium-e-sikuli/
+https://ead.cesar.org.br/curso/selenium/
+https://www.guru99.com/introduction-to-selenium.html
+http://automationpractice.com/index.php
+automacao@cwi.com.br | automacao2@cwi.com.br
+123456
+
+Apenas botoes visiveis: #homefeatured .ajax_add_to_cart_button
+
+INTRODUÇÃO
+	Apresentação do conteudo que será abordado
+	Testes automatizados: momento atual do mercado * introdução - bate-papo - conhecendo os alunos
+	Skills necessários para trabalhar com testes automatizados - Linguagens de programação (orientação a objetos) - gostar de programar
+FUNDAMENTOS:
+	Conceitos de web - OK
+		– HTML, Javascript, Ajax
+		– Identificando elementos - Explicar sobre seletores, chrome inspector, exercício prático simples usando xpath, css, seletores mais utilizados, boas praticas
+		- DOJO / Prática (Seletores)
+	Selenium webdriver
+		- Introdução sobre tudo o que será utilizado
+		- comandos: findBy, click, sendkeys, wait(boas praticas), actions, maximizando tela, iniciando driver
+		- DOJO / Prática
+	Buscando informação
+		- stackoverflow, pesquisas em ingles, github, sites oficiais, blogs
+	Quando e o que devemos Automatizar - Como escolher os cenários que devem ser automatizados
+	Ferramentas Desk, web, mobile, serviço, performance ??
+PRATICA:
+	PARTE 1:
+	   PageObjects
+		   Criando método da page
+		   Mapeando os elementos (PageFactory)
+		   Fundamento já explicado: Seletores
+		   Interagindo com os elementos (click, sendkeys, wait)
+		   Criando um assert
+		   DOJO / Prática
+	PARTE 2:
+	   Escrevendo Histórias de usuario BDD gherkin
+	   Escrevendo os steps definitions
+	   Iniciando e fechando o navegador e abrindo URL (before e after sem código nenhum talvez usar TestWatcher)
+	PARTE 3:
+		Exercício 1
+		Exercício 2
+		Relatórios de Teste - extentreports / alurereports
+		Exercício x
+		
+* Jenkins
+
+------------------------------------------------------------------------------------------------
+
+Aula 2:
+
+- BDD Teoria - Dira
+	- Dinamica
+- Cucumber + Java
+	- Explicar fluxo: Test > Feature > Step > Page > Element Map
+	- Criando Feature e Steps
+	- Indicação de site (prints passo a passo completo, exercicios e tudo mais):
+		https://automacaoforadacaixa.wordpress.com/2017/05/01/1-configuracao-ambiente-selenium-e-cucumber/
+- Relembrando
+	- Seletores ($("") e $x(""))
+	- PageObjects ??
+- Desafio 1: BDD definir os cenarios...
+	- Métodos e comandos que serão necessários (waitElement, logPrint, etc..)
+- Reports
+	- Extent reports (logPrint)
+	- PDF Reports
+- Desafio 2: Automatizar compra
+	- disponibilizar user e senha site - automacao@cwi.com.br | automacao2@cwi.com.br | 123456
+- Overview Sikuli, Winium e WebServices (Bonus se sobrar tempo)
+
+* commitar no github
+* simular importaçao git e fork
+* pedir para criarem conta no github
+* Dojo ??
+* corrigir problema fechamento app sikuli e winium
+* simular desafios
+
+

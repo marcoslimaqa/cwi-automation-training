@@ -1,0 +1,1 @@
+Pattern("notepad-menu-win10.png").similar(0.60)
