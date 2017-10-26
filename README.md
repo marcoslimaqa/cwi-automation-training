@@ -17,7 +17,7 @@
 1. Ajuste a visualização das packages: Acessar o icone com seta para baixo ao lado do Package Explorer > Package Presentation > Hierarchical
 
 #### Efetuando commit pelo Eclipse:
-1. Clique no o botão direito no nome do projeto
+1. Clique com o botão direito no nome do projeto
 1. Team > Commit
 
 ## Comandos úteis
