@@ -2,8 +2,8 @@
 
 ### Obtendo uma cópia deste projeto para o seu Github
 
-1 - Logar no Github
-2 - Acessar o projeto: https://github.com/marcoslimaqa/cwi-automation-training
+1 - Logar no Github<br>
+2 - Acessar o projeto: https://github.com/marcoslimaqa/cwi-automation-training<br>
 3 - Clicar no botão Fork
 
 ### Download do projeto no Eclipse
