@@ -8,7 +8,7 @@
 
 #### Download do projeto no Eclipse
 
-1. Acesse o projeto que foi copiado para o seu Github: https://github.com/[usuario-gitbub]/cwi-automation-training
+1. Acesse o projeto que foi copiado para o seu Github: https://github.com/[usuario-github]/cwi-automation-training
 1. Vá em: Clone or Download > Copy to Clipboard
 1. Abra o Eclipse
 1. Acessar o menu: File > Import > Git
