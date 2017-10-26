@@ -12,6 +12,7 @@
 1. Vá em: Clone or Download > Copy to Clipboard
 1. Abra o Eclipse
 1. Acessar o menu: File > Import > Git
+1. Clone URI
 1. Avançar as etapas até o final (Next > Next > Finish)
 1. Aguarda download do projeto
 1. Ajuste a visualização das packages: Acessar o icone com seta para baixo ao lado do Package Explorer > Package Presentation > Hierarchical
