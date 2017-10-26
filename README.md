@@ -23,4 +23,5 @@
 
 ## Comandos úteis
 - F3 - Acessa o código por trás de um step da feature ou qualquer método java pelo Eclipse
+- Ctrl + Shift + F: Nos arquivos .featuare é útil para auto-identação
 - Abrir navegador - TestRule.openApplicationChrome(url);
