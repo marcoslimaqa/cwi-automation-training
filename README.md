@@ -1,12 +1,12 @@
 ## Clonando o projeto
 
-### Obtendo uma cópia deste projeto para o seu Github
+#### Obtendo uma cópia deste projeto para o seu Github
 
 1. Logar no Github
 1. Acessar o projeto: https://github.com/marcoslimaqa/cwi-automation-training
 1. Clicar no botão Fork
 
-### Download do projeto no Eclipse
+#### Download do projeto no Eclipse
 
 1. Acesse o projeto que foi copiado para o seu Github: https://github.com/usuario-gitbub/cwi-automation-training
 1. Vá em: Clone or Download > Copy to Clipboard
@@ -16,7 +16,7 @@
 1. Aguarda download do projeto
 1. Ajuste a visualização das packages: Acessar o icone com seta para baixo ao lado do Package Explorer > Package Presentation > Hierarchical
 
-### Efetuando commit pelo Eclipse:
+#### Efetuando commit pelo Eclipse:
 1. Clique no o botão direito no nome do projeto
 1. Team > Commit
 
