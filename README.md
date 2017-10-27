@@ -1,3 +1,7 @@
+Abaixo informações necessárias para o treinamento.
+
+Os slides das aulas estão [aqui](arquivos-treinamento).
+
 ## Clonando o projeto
 
 #### Obtendo uma cópia deste projeto para o seu Github
@@ -21,7 +25,9 @@
 1. Clique com o botão direito no nome do projeto
 1. Team > Commit
 
-## Comandos úteis
+## Comandos e atalhos úteis
 - F3 - Acessa o código por trás de um step da feature ou qualquer método java pelo Eclipse
 - Ctrl + Shift + F: Nos arquivos .featuare é útil para auto-identação
-- Abrir navegador - TestRule.openApplicationChrome(url);
+- TestRule.openApplicationChrome(url) - Abrir navegador
+- logPrint("Texto") - Adiciona print da tela ao report html e pdf
+- waitElement(elemento, 15) - Espera por um elemento por no máximo 15 segundos
