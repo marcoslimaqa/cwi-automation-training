@@ -1,4 +1,4 @@
-Abaixo informações necessárias para o treinamento.
+## Aos alunos: informações necessárias para o treinamento
 
 Os slides das aulas estão [aqui](arquivos-treinamento).
 
