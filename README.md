@@ -2,7 +2,7 @@
 
 Os slides das aulas estão [aqui](arquivos-treinamento).
 
-## Clonando o projeto
+## Clonando este projeto e importando para o Eclipse
 
 #### Obtendo uma cópia deste projeto para o seu Github
 
